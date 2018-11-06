@@ -43,3 +43,16 @@ reshaped_4x4_matrix = tf.reshape(matrix, [4, 4])
 print("Original matrix (8x2):", matrix.numpy())
 print("Reshaped matrix (2x8):", reshaped_2x8_matrix.numpy())
 print("Reshaped matrix (4x4):", reshaped_4x4_matrix.numpy())
+
+#Variables, Initialization and Assignment
+
+# Create a scalar variable with the initial value 3.
+v = tf.contrib.eager.Variable([3])
+# Create a vector variable of shape [1, 4], with random initial values, sampled from a normal distribution with mean 1 and standard deviation 0.35.
+w = tf.contrib.eager.Variable(tf.random_normal([1, 4], mean=1.0, stddev=0.35))
+print("v:", v.numpy())
+print("w:", w.numpy())
+tf.assign(v, [7])
+print(v.numpy())
+v.assign([5])
+print(v.numpy())
