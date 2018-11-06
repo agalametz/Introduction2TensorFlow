@@ -20,3 +20,13 @@ print("primes_doubled:", primes_doubled)
 
 some_matrix = tf.constant([[1, 2, 3], [4, 5, 6]], dtype=tf.int32)
 print(some_matrix.numpy())
+
+#Ex Broadcasting:
+one = tf.constant(1, dtype=tf.int32)
+print("one:", one)
+just_beyond_primes = tf.add(primes, one)
+print("just_beyond_primes:", just_beyond_primes)
+two = tf.constant(2, dtype=tf.int32)
+primes_doubled = primes * two
+print("primes_doubled:", primes_doubled)
+
